@@ -18,8 +18,7 @@ services:
     - 8006:8006
     - 3389:3389/tcp
     - 3389:3389/udp
-    - 3322:3322/tcp
-    - 3322:3322/udp
+    - "3322:22"
     stop_grace_period: 2m
     restart: on-failure
     volumes:
