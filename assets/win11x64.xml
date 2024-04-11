@@ -319,7 +319,7 @@
             <Name>Docker</Name>
             <Group>Administrators</Group>
             <Password>
-              <Value />
+              <Value>Password!</Value>
               <PlainText>true</PlainText>
             </Password>
           </LocalAccount>
@@ -334,7 +334,7 @@
         <Enabled>true</Enabled>
         <LogonCount>65432</LogonCount>
         <Password>
-          <Value />
+          <Value>Password!</Value>
           <PlainText>true</PlainText>
         </Password>
       </AutoLogon>
@@ -433,6 +433,18 @@
         <SynchronousCommand wcm:action="add">
           <Order>17</Order>
           <CommandLine>powershell C:\Python312\Scripts\pip.exe install pywinrm</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Order>18</Order>
+          <CommandLine>powershell Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Order>19</Order>
+          <CommandLine>powershell Start-Service sshd</CommandLine>
+        </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Order>20</Order>
+          <CommandLine>powershell Set-Service -Name sshd -StartupType 'Automatic'</CommandLine>
         </SynchronousCommand>
       </FirstLogonCommands>
     </component>
