@@ -1,5 +1,13 @@
 # Custom Windows 11
 
+Apps installed after success intllation:
+- Chocolatey
+- Python
+- pywinrm
+- OpenSSH
+
+*Note:* Update is required to use `winget` command.
+
 ## Demo
 <img src="https://raw.githubusercontent.com/prmiguel/media/main/2f08541a-966c-4111-af67-3cfcfdb86b37.gif" width="700"/>
 
