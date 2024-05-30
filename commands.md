@@ -27,7 +27,7 @@ ssh -p 3322 docker@<ip> powershell Expand-Archive 'C:\Users\Docker\calc.zip' 'C:
 
 ### Install PWA through SSH with PowerShell
 ```sh
-ssh -p 3323 docker@<ip> "cd C:\Users\Docker\calc && powershell -executionpolicy bypass -File .\install.ps1"
+ssh -p 3322 docker@<ip> "cd C:\Users\Docker\calc; powershell -executionpolicy bypass -File .\install.ps1"
 ```
 
 ### Perform a clean reinstallation
