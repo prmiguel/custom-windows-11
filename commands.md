@@ -22,7 +22,7 @@ scp -P 3322 ~/Downloads/calc.zip docker@<ip>:'C:\Users\Docker\calc.zip'
 
 ### Extract files through SSH with PowerShell
 ```sh
-scp -P 3322 ~/Downloads/calc.zip docker@<ip>:'C:\Users\Docker\calc.zip'
+ssh -p 3322 docker@<ip> powershell Expand-Archive 'C:\Users\Docker\calc.zip' 'C:\Users\Docker\calc'
 ```
 
 ### Install PWA through SSH with PowerShell
