@@ -446,6 +446,10 @@
           <Order>20</Order>
           <CommandLine>powershell Set-Service -Name sshd -StartupType 'Automatic'</CommandLine>
         </SynchronousCommand>
+        <SynchronousCommand wcm:action="add">
+          <Order>21</Order>
+          <CommandLine>powershell New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force</CommandLine>
+        </SynchronousCommand>
       </FirstLogonCommands>
     </component>
   </settings>
