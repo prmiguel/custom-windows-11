@@ -2,8 +2,7 @@
 version: "3"
 services:
   windows:
-    image: custom-windows:local
-    build: .
+    image: ghcr.io/prmiguel/custom-windows-11:main
     container_name: windows11
     environment:
       VERSION: "win11"
